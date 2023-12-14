@@ -1,12 +1,18 @@
 const { createApp } = Vue;
 
-createApp ({
-    data(){
-        return{
+createApp({
+    data() {
+        return {
+            discList: [],
+            apiUrl: "index.php",
+            
 
         }
     },
-    created(){
+    created() {
+        axios.get(this.apiUrl).then((resp) => {
+            this.discList = resp.data;
+          });
 
     },
     methods: {

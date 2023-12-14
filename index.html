@@ -20,11 +20,27 @@
 
 <body>
     <div id="app">
-
-
-
-        
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div v-for="disc in discList" class="card">
+                        <img :src="disc.poster" alt="">
+                        <div class="text-part">
+                            <h2>{{ disc.title }}</h2>
+                            <p>{{ disc.author }}</p>
+                            <p>{{ disc.year }}</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
+
+    </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
